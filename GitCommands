@@ -34,4 +34,18 @@ git checkout <BRANCHNAME>
 ---------------------Get list of local branch--------
 git branch
 
-***this line is after checkout of new branch***
+---------------------Create branch, switch to it and commit changes to Branched remote repository--------
+git branch <BRANCHNAME>
+git checkout <BRANCHNAME>
+git add -A
+git commit -m <COMMIT MESSAGE TO THE BRANCH>
+git push -u origin myTempbranch
+
+---------------------Merge changes to Master remote repository--------
+git checkout <BRANCHNAME>
+git branch
+git merged
+git merge <BRANCHNAME>
+git push origin master
+
+
