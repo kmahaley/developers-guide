@@ -89,6 +89,6 @@ git clean -df
 ---------------------Revert commits with HASH--------
 git revert <HASH> (copy the HASH of the commit you want to revert)
 
-***********************************************
-RESOLVING MERGE CONFLICT WITH GIT : MELD
-***********************************************
+#########3333333333333333333333333333333#############
+GARBAGE DATA FOR MERGING
+################555555555555555555555555555555#######
