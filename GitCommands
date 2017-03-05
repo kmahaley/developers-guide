@@ -26,3 +26,12 @@ git branch -a
 git diff
 ---------------------Get updated remote respository, if any developer pushed changes--------
 git pull origin master
+git push origin master
+
+---------------------Branching from remote respository--------
+git branch <BRANCHNAME>
+git checkout <BRANCHNAME>
+---------------------Get list of local branch--------
+git branch
+
+***this line is after checkout of new branch***
