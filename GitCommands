@@ -93,5 +93,6 @@ git revert <HASH> (copy the HASH of the commit you want to revert)
 (Set up any mergetool in config, for example meld)
 git mergetool
 - save and close meld tool
-git diff
 git status
+git clean -df
+git commit -m <MESSAGE>
