@@ -89,7 +89,6 @@ git clean -df
 ---------------------Revert commits with HASH--------
 git revert <HASH> (copy the HASH of the commit you want to revert)
 
-
-***********************************************
-CONFLICT TESTING IN GIT
-***********************************************
+---------------------Resolve merge conflicts with mergetool--------
+(Set up any mergetool in config, for example meld)
+git mergetool
