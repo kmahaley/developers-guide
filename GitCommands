@@ -71,12 +71,20 @@ git fetch --all
 git commit --amend -m <MESSAGE>
 
 ---------------------Moving commits from one branch to another--------
-git log (Select hash of the commit you want to move to different branch)
+(If accidently you did changes in the master branch instead of sub branch)
+git log (Select HASH of the commit you want to move to different branch)
 git checkout <BRANCHNAME> (BRANCHNAME, where you want to move the commit)
 git cherry-pick <HASH>
 
-
 ---------------------Undoing commits or changes--------
-git reset --soft <HASH OF THE COMMIT> ()
-git reset
-git reset --hard <HASH OF THE COMMIT> ()
+(HASH OF THE COMMIT= Point where you want to return)
+git reset --soft <HASH OF THE COMMIT> (Undo the commit)
+git status
+git reset <HASH OF THE COMMIT> (Remove changes from staging area)
+git reset --hard <HASH OF THE COMMIT> (Go to previous version of the commit)
+
+---------------------Clean git repository of untrack folders and files--------
+git clean -df
+
+---------------------Revert commits with HASH--------
+git revert <HASH> (copy the HASH of the commit you want to revert)
