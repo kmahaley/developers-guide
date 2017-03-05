@@ -70,3 +70,10 @@ git fetch --all
 ---------------------Correct wrong commit message--------
 git commit --amend -m <MESSAGE>
 
+---------------------Moving commits from one branch to another--------
+
+
+---------------------Undoing commits or changes--------
+git reset --soft <HASH OF THE COMMIT> ()
+git reset
+git reset --hard <HASH OF THE COMMIT> ()
