@@ -22,4 +22,7 @@ git clone <REPOSITORY URL>
 git remote -v
 git branch -a
 
----------------------Information about remote respository--------
+---------------------Difference with remote respository--------
+git diff
+---------------------Get updated remote respository, if any developer pushed changes--------
+git pull origin master
