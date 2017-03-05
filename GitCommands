@@ -42,9 +42,10 @@ git commit -m <COMMIT MESSAGE TO THE BRANCH>
 git push -u origin myTempbranch
 
 ---------------------Merge changes to Master remote repository--------
-git checkout <BRANCHNAME>
+git checkout master
 git branch
-git merged
+git pull origin master
+git branch --merged
 git merge <BRANCHNAME>
 git push origin master
 
