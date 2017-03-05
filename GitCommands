@@ -88,3 +88,5 @@ git clean -df
 
 ---------------------Revert commits with HASH--------
 git revert <HASH> (copy the HASH of the commit you want to revert)
+
+*** REVERT THE LINE ****
