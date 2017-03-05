@@ -1,13 +1,17 @@
+---------------------Initial settings--------
 git --version
 git config --global user.name <USERNAME>
 git config --global user.email <EMAILID>
 git config --list
 git help config
 git status
----------------------add files to monitoring or staging area--------
+
+touch .gitignore
+(include all files you don't want to add into commits in this file)
+---------------------add files to Staging area--------
 git add "FILENAME"
 git add -A
----------------------Remove files to monitoring or staging area--------
+---------------------Remove files from Staging area--------
 git reset "FILENAME"
 git reset
 
@@ -49,11 +53,20 @@ git branch --merged (branches that are merged into master)
 git merge <BRANCHNAME>
 git push origin master
 
----------------------Delete branch locally--------
+---------------------Delete branch locally & push to remote--------
+git branch --merged
 git checkout <DIFFERENT_BRANCH_NAME>
 git branch -d <BRANCHNAME>
+git branch -a
+git push origin --delete <BRANCHNAME>
 
 ---------------------Checkout to remote repository branch--------
 (branch exist only on remote repository)
 git fetch origin
 git checkout --track origin/<BRANCHNAME>
+
+git fetch --all
+
+---------------------Correct wrong commit message--------
+git commit --amend -m <MESSAGE>
+
