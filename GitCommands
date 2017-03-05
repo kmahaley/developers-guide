@@ -39,13 +39,13 @@ git branch <BRANCHNAME>
 git checkout <BRANCHNAME>
 git add -A
 git commit -m <COMMIT MESSAGE TO THE BRANCH>
-git push -u origin myTempbranch
+git push -u origin <BRANCHNAME>
 
 ---------------------Merge changes to Master remote repository--------
 git checkout master
 git branch
 git pull origin master
-git branch --merged
+git branch --merged (branches that are merged into master)
 git merge <BRANCHNAME>
 git push origin master
 
