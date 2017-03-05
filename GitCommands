@@ -49,4 +49,11 @@ git branch --merged
 git merge <BRANCHNAME>
 git push origin master
 
+---------------------Delete branch locally--------
+git checkout <DIFFERENT_BRANCH_NAME>
+git branch -d <BRANCHNAME>
 
+---------------------Checkout to remote repository branch--------
+(branch exist only on remote repository)
+git fetch origin
+git checkout --track origin/<BRANCHNAME>
