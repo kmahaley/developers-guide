@@ -1,0 +1,24 @@
+git --version
+git config --global user.name <USERNAME>
+git config --global user.email <EMAILID>
+git config --list
+git help config
+git status
+---------------------add files to monitoring or staging area--------
+git add "FILENAME"
+git add -A
+---------------------Remove files to monitoring or staging area--------
+git reset "FILENAME"
+git reset
+
+git commit -m <MESSAGE>
+git log
+
+---------------------Working with remote respository--------
+git clone <REPOSITORY URL> <PATH IN YOUR COMPUTER>
+git clone <REPOSITORY URL>
+
+---------------------Information about remote respository--------
+git remote -v
+git branch -a
+
