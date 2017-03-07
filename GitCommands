@@ -1,5 +1,6 @@
 ---------------------Initial settings--------
 git --version
+git init
 git config --global user.name <USERNAME>
 git config --global user.email <EMAILID>
 git config --list
@@ -18,6 +19,7 @@ git reset
 git commit -m <MESSAGE>
 git log
 
+COMMIT BLOWN THE :wq
 ---------------------Working with remote respository--------
 git clone <REPOSITORY URL> <PATH IN YOUR COMPUTER>
 git clone <REPOSITORY URL>
@@ -38,9 +40,16 @@ git checkout <BRANCHNAME>
 ---------------------Get list of local branch--------
 git branch
 
+----------Removes changes made to the local branch if not staged--------
+git stash
+
 ---------------------Create branch, switch to it and commit changes to Branched remote repository--------
 git branch <BRANCHNAME>
 git checkout <BRANCHNAME>
+OR
+git checkout -b <BRANCHNAME>
+
+git add <FILENAME>/<FOLDERNAME>
 git add -A
 git commit -m <COMMIT MESSAGE TO THE BRANCH>
 git push -u origin <BRANCHNAME>
