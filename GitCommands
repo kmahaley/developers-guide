@@ -105,3 +105,6 @@ git mergetool
 git status
 git clean -df
 git commit -m <MESSAGE>
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
