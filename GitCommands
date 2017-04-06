@@ -76,8 +76,9 @@ git checkout --track origin/<BRANCHNAME>
 
 git fetch --all
 
----------------------Correct wrong commit message--------
+---------------------Correct wrong commit message after push to remote————
 git commit --amend -m <MESSAGE>
+git push —force <REMOTENAME> <BRANCHNAME>
 
 ---------------------Moving commits from one branch to another--------
 (If accidently you did changes in the master branch instead of sub branch)
