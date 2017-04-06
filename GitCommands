@@ -31,8 +31,8 @@ git branch -a
 ---------------------Difference with remote respository--------
 git diff
 ---------------------Get updated remote respository, if any developer pushed changes--------
-git pull origin master
-git push origin master
+git pull  <REMOTENAME> <BRANCHNAME> 
+git push  <REMOTENAME> <BRANCHNAME> 
 
 ---------------------Branching from remote respository--------
 git branch <BRANCHNAME>
@@ -40,7 +40,7 @@ git checkout <BRANCHNAME>
 ---------------------Get list of local branch--------
 git branch
 
-----------Removes changes made to the local branch if not staged--------
+---------------------Removes changes made to the local branch if not staged--------
 git stash
 
 ---------------------Create branch, switch to it and commit changes to Branched remote repository--------
@@ -92,11 +92,11 @@ git status
 git reset <HASH OF THE COMMIT> (Remove changes from staging area)
 git reset --hard <HASH OF THE COMMIT> (Go to previous version of the commit)
 
----------------------Clean git repository of untrack folders and files--------
-git clean -df
-
 ---------------------Revert commits with HASH--------
 git revert <HASH> (copy the HASH of the commit you want to revert)
+
+---------------------Clean git repository of untrack folders and files--------
+git clean -df
 
 ---------------------Resolve merge conflicts with mergetool--------
 (Set up any mergetool in config, for example meld)
@@ -105,4 +105,5 @@ git mergetool
 git status
 git clean -df
 git commit -m <MESSAGE>
+
 
