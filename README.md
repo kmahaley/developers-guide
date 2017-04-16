@@ -1,2 +1,4 @@
-# GIT commands and scenarios explained
-This is Git_Commands_Testing repository to explains how to work with the git versioning system
+# GIT commands and scenarios explained in GitGuide
+This is DevelopersGuide repository to explains how to work with the git versioning system
+
+# MAVEN explained in MavenGuide.docx
