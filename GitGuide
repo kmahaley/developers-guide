@@ -72,6 +72,7 @@ git push origin --delete <BRANCHNAME>
 ---------------------Checkout to remote repository branch--------
 (branch exist only on remote repository)
 git fetch origin
+git branch -r
 git checkout --track origin/<BRANCHNAME>
 
 git fetch --all
