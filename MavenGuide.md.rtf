@@ -1,0 +1,426 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf820
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\ftech\fcharset77 Symbol;\f2\fmodern\fcharset0 Courier;
+\f3\froman\fcharset0 Times-Roman;\f4\fnil\fcharset0 HelveticaNeue;\f5\fmodern\fcharset0 CourierNewPSMT;
+}
+{\colortbl;\red255\green255\blue255;\red186\green57\blue37;\red0\green128\blue128;\red51\green51\blue153;
+\red240\green240\blue240;\red204\green204\blue204;\red191\green191\blue191;\red122\green37\blue24;\red247\green248\blue247;
+\red222\green222\blue222;\red248\green248\blue247;\red0\green0\blue255;}
+{\*\expandedcolortbl;;\csgenericrgb\c72941\c22353\c14510;\csgenericrgb\c0\c50196\c50196;\csgenericrgb\c20000\c20000\c60000;
+\csgenericrgb\c94118\c94118\c94118;\csgenericrgb\c80000\c80000\c80000;\csgray\c79525;\csgenericrgb\c47843\c14510\c9412;\csgenericrgb\c96863\c97255\c96863;
+\csgenericrgb\c87059\c87059\c87059;\csgenericrgb\c97255\c97255\c96863;\csgenericrgb\c0\c0\c100000;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid301\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid4}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}}
+\margl1440\margr1440\vieww33100\viewh18180\viewkind0
+\deftab720
+\pard\pardeftab720\ri0\sa120\partightenfactor0
+
+\f0\fs41 \cf2 Maven:\
+Dealing with build failure\
+\pard\pardeftab720\ri0\sb100\sa100\partightenfactor0
+
+\fs28 \cf0 \kerning1\expnd-1\expndtw-2
+If you are running a complex multi-module project build, you can define how the Maven build system should react to errors in one module.\
+\pard\tx720\pardeftab720\li360\fi-360\ri0\sa150\partightenfactor0
+\ls1\ilvl0
+\f1\fs20 \cf0 \kerning1\expnd-1\expndtw-2
+\'a5	
+\f0\fs28 \kerning1\expnd-1\expndtw-2
+-fae, --fail-at-end - fails the build after all modules are build; allow all non-impacted builds to continue\
+\ls1\ilvl0
+\f1\fs20 \kerning1\expnd-1\expndtw-2
+\'a5	
+\f0\fs28 \kerning1\expnd-1\expndtw-2
+-ff, --fail-fast - Stop at first module build failure\
+\ls1\ilvl0
+\f1\fs20 \kerning1\expnd-1\expndtw-2
+\'a5	
+\f0\fs28 \kerning1\expnd-1\expndtw-2
+-fn, --fail-never - NEVER fail the build, regardless of module build result\
+\pard\pardeftab720\ri0\sb100\sa100\partightenfactor0
+\cf0 \kerning1\expnd-1\expndtw-2
+The -fn and -fae options are useful to verify builds that are running within a continuous integration tool like Jenkins and to see all errors in the build.\
+\pard\pardeftab720\ri0\sa120\partightenfactor0
+
+\fs41 \cf2 \kerning1\expnd0\expndtw0 Creating a Maven Wrapper\
+\pard\pardeftab720\ri0\sb100\sa100\partightenfactor0
+
+\fs28 \cf0 \kerning1\expnd-1\expndtw-2
+Create a Maven Wrapper for a project with the latest available Maven version.\
+\pard\tx916\tx1832\tx2748\tx3664\tx4580\tx5496\tx6412\tx7328\tx8244\tx9160\tx10076\tx10992\tx11908\tx12824\tx13740\tx14656\pardeftab720\ri0\partightenfactor0
+
+\fs24 \cf0 \kerning1\expnd0\expndtw0 cd \{your-project\}\
+mvn -N io.takari:maven:wrapper\
+\pard\pardeftab720\ri0\sb100\sa100\partightenfactor0
+
+\fs28 \cf0 \kerning1\expnd-1\expndtw-2
+Create a Maven Wrapper for a project with a specified Maven version by using the maven property.\
+\pard\tx916\tx1832\tx2748\tx3664\tx4580\tx5496\tx6412\tx7328\tx8244\tx9160\tx10076\tx10992\tx11908\tx12824\tx13740\tx14656\pardeftab720\ri0\partightenfactor0
+
+\fs24 \cf0 \kerning1\expnd0\expndtw0 cd \{your-project\}\
+mvn -N io.takari:maven:wrapper -Dmaven=3.3.0\
+\pard\pardeftab720\ri0\sb100\sa100\partightenfactor0
+
+\fs28 \cf0 \kerning1\expnd-1\expndtw-2
+executing maven wrapper in unix\
+\pard\tx916\tx1832\tx2748\tx3664\tx4580\tx5496\tx6412\tx7328\tx8244\tx9160\tx10076\tx10992\tx11908\tx12824\tx13740\tx14656\pardeftab720\ri0\partightenfactor0
+
+\f2\fs24 \cf0 \kerning1\expnd0\expndtw0 ./mvnw clean package\
+\pard\pardeftab720\ri0\sa120\partightenfactor0
+
+\f0 \cf2 \
+\pard\pardeftab720\ri0\sa120\partightenfactor0
+
+\fs41 \cf2 Creating a Maven Wrapper\
+\pard\pardeftab720\ri0\sa120\partightenfactor0
+
+\fs28 \cf0 \kerning1\expnd-1\expndtw-2
+Run maven using following commands\
+\pard\tx916\tx1832\tx2748\tx3664\tx4580\tx5496\tx6412\tx7328\tx8244\tx9160\tx10076\tx10992\tx11908\tx12824\tx13740\tx14656\pardeftab720\ri0\partightenfactor0
+
+\f2\fs24 \cf0 \kerning1\expnd0\expndtw0 mvn compile\
+mvn clean package\
+mvn test\
+mvn \'96Dtest=<CLASSNAME> test\
+mvn package -DSkipTests\
+\pard\pardeftab720\ri0\sa120\partightenfactor0
+\cf0 \
+\pard\pardeftab720\ri0\sa120\partightenfactor0
+
+\f0\fs41 \cf2 Adding goals to life cycle phases\
+\pard\pardeftab720\ri0\sb100\sa100\partightenfactor0
+
+\fs28 \cf0 \kerning1\expnd-1\expndtw-2
+You can add goals to life cycle phases by configuring more Maven plug-ins and adding them to a life cycle in your pom file. You need to specify which goal should be executed. If the plug-in does not specify the default life cycle it should run, you must also specify the life cycle phase it should run.
+\f3 \kerning1\expnd-1\expndtw-2
+\
+\pard\tx916\tx1832\tx2748\tx3664\tx4580\tx5496\tx6412\tx7328\tx8244\tx9160\tx10076\tx10992\tx11908\tx12824\tx13740\tx14656\pardeftab720\ri0\partightenfactor0
+
+\f2\fs24 \cf3 \kerning1\expnd0\expndtw0 <plugin>\cf0 \
+   \cf3 <groupId>\cf0 com.vogella.example\cf3 </groupId>\cf0 \
+   \cf3 <artifactId>\cf0 vogella-some-maven-plugin\cf3 </artifactId>\cf0 \
+   \cf3 <version>\cf0 1.0\cf3 </version>\cf0 \
+   \cf3 <executions>\cf0 \
+     \cf3 <execution>\cf0 \
+       \cf3 <phase>\cf0 verify\cf3 </phase>\cf0 \
+       \cf3 <goals>\cf0 \
+         \cf3 <goal>\cf0 checklinks\cf3 </goal>\cf0 \
+       \cf3 </goals>\cf0 \
+     \cf3 </execution>\cf0 \
+   \cf3 </executions>\cf0 \
+ \cf3 </plugin>\cf0 \
+\pard\pardeftab720\ri0\sa120\partightenfactor0
+
+\f0\fs41 \cf2 \
+Using properties\
+\pard\pardeftab720\ri0\sb100\sa100\partightenfactor0
+
+\fs28 \cf0 \kerning1\expnd-1\expndtw-2
+You can specify properties in your build files. You can override them via the command line with the\'a0\kerning1\expnd0\expndtw0 -D\kerning1\expnd-1\expndtw-2
+parameter followed directly (without whitespace) by its value. See the next chapter for an example.\
+\pard\pardeftab720\ri0\sa120\partightenfactor0
+
+\fs41 \cf2 \kerning1\expnd0\expndtw0 Effective POM\
+\pard\pardeftab720\ri0\sb100\sa100\partightenfactor0
+
+\fs28 \cf0 With all this POM inheritance it may be hard to know what the total POM file looks like when Maven executes. The total POM file (result of all inheritance) is called the\'a0
+\i effective POM
+\i0 . You can get Maven to show you the effective POM using this command:\
+\pard\tx916\tx1832\tx2748\tx3664\tx4580\tx5496\tx6412\tx7328\tx8244\tx9160\tx10076\tx10992\tx11908\tx12824\tx13740\tx14656\pardeftab720\ri0\partightenfactor0
+
+\f2\fs24 \cf0 Mvn help:effective-pom\
+\pard\pardeftab720\ri0\sb100\sa100\partightenfactor0
+
+\f0\fs28 \cf0 This command will make Maven write out the effective POM to the command line prompt.\
+\pard\pardeftab720\ri0\sb360\partightenfactor0
+
+\fs41 \cf2 Maven Settings File\
+\pard\pardeftab720\ri0\sb100\sa100\partightenfactor0
+
+\fs28 \cf0 Maven has two settings files. In the settings files you can configure settings for Maven across all Maven POM files. For instance, you can configure:\
+\pard\tx720\pardeftab720\li720\fi-360\ri0\sb100\sa100\partightenfactor0
+\ls2\ilvl0
+\f1\fs20 \cf0 \'a5	
+\f0\fs28 Location of local repository\
+\ls2\ilvl0
+\f1\fs20 \'a5	
+\f0\fs28 Active build profile\
+\ls2\ilvl0
+\f1\fs20 \'a5	
+\f0\fs28 Etc.\
+\pard\pardeftab720\ri0\sb100\sa100\partightenfactor0
+\cf0 The settings files are called\'a0settings.xml. The two settings files are located at:\
+\pard\tx720\pardeftab720\li720\fi-360\ri0\sb100\sa100\partightenfactor0
+\ls3\ilvl0
+\f1\fs20 \cf0 \'a5	
+\f0\fs28 The Maven installation directory:\'a0$M2_HOME/conf/settings.xml\
+\ls3\ilvl0
+\f1\fs20 \'a5	
+\f0\fs28 The user's home directory:\'a0$\{user.home\}/.m2/settings.xml\
+\pard\pardeftab720\ri0\sb100\sa100\partightenfactor0
+\cf0 Both files are optional. If both files are present, the values in the user home settings file overrides the values in the Maven installation settings file.\
+You can read more about the Maven settings files in the\'a0{\field{\*\fldinst{HYPERLINK "http://maven.apache.org/settings.html%22%20%5Ct%20%22_blank"}}{\fldrslt 
+\b \cf4 Maven Settings Reference}}.\
+\pard\pardeftab720\ri0\sb360\partightenfactor0
+
+\fs41 \cf2 Maven Build Life Cycles, Phases and Goals\
+\pard\pardeftab720\ri0\sb100\sa100\partightenfactor0
+
+\fs28 \cf0 When Maven builds a software project it follows a build life cycle. The build life cycle is divided into build phases, and the build phases are divided into build goals. Maven build life cycles, build phases and goals are described in more detail in the\'a0{\field{\*\fldinst{HYPERLINK "http://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html%22%20%5Ct%20%22_blank"}}{\fldrslt 
+\b \cf4 \ul \ulc4 Maven Introduction to Build Phases}}, but here I will give you a quick overview.\
+\pard\pardeftab720\ri0\sb100\sa100\partightenfactor0
+
+\b \cf0 Build Life Cycles
+\b0 \uc0\u8232 Maven has 3 built-in build life cycles. These are:\
+\pard\tx720\pardeftab720\li720\fi-360\ri0\sb100\sa100\partightenfactor0
+\ls4\ilvl0\cf0 1.	default\
+2.	clean\
+3.	site\
+\pard\pardeftab720\ri0\sb100\sa100\partightenfactor0
+\cf0 Each of these build life cycles takes care of a different aspect of building a software project. Thus, each of these build life cycles are executed independently of each other. You can get Maven to execute more than one build life cycle, but they will be executed in sequence, separately from each other, as if you had executed two separate Maven commands.\
+The\'a0default\'a0life cycle handles everything related to compiling and packaging your project. The\'a0clean\'a0life cycle handles everything related to removing temporary files from the output directory, including generated source files, compiled classes, previous JAR files etc. The\'a0site\'a0life cycle handles everything related to generating documentation for your project. In fact,\'a0site\'a0can generate a complete website with documentation for your project.\
+\pard\pardeftab720\ri0\sb100\sa100\partightenfactor0
+
+\b \cf0 Build Phases
+\b0 \uc0\u8232 Each build life cycle is divided into a sequence of build phases, and the build phases are again subdivided into goals. Thus, the total build process is a sequence of build life cycle(s), build phases and goals.\
+You can execute either a whole build life cycle like\'a0clean\'a0or\'a0site, a build phase like\'a0install\'a0which is part of the\'a0default\'a0build life cycle, or a build goal like\'a0dependency:copy-dependencies. Note: You cannot execute the\'a0default\'a0life cycle directly. You have to specify a build phase or goal inside thedefault\'a0life cycle.\
+When you execute a build phase, all build phases before that build phase in this standard phase sequence are executed. Thus, executing the\'a0install\'a0build phase really means executing all build phases before the\'a0install\'a0phase, and then execute the\'a0install\'a0phase after that.\
+The\'a0default\'a0life cycle is of most interest since that is what builds the code. Since you cannot execute the\'a0default\'a0life cycle directly, you need to execute a build phase or goal from the\'a0default\'a0life cycle. The\'a0default\'a0life cycle has an extensive sequence of build phases and goals, ,so I will not describe them all here. The most commonly used build phases are:\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw15\brdrcf6 \trbrdrl\brdrs\brdrw15\brdrcf6 \trbrdrr\brdrs\brdrw15\brdrcf6 
+\clvertalc \clcbpat5 \clbrdrt\brdrs\brdrw15\brdrcf6 \clbrdrl\brdrs\brdrw15\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw20\brdrcf7 \clpadt120 \clpadl30 \clpadb30 \clpadr120 \gaph\cellx4320
+\clvertalc \clcbpat5 \clbrdrt\brdrs\brdrw15\brdrcf6 \clbrdrl\brdrs\brdrw20\brdrcf7 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw15\brdrcf6 \clpadt120 \clpadl30 \clpadb30 \clpadr120 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f4\fs27 \cf0 Build Phase\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Description\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw15\brdrcf6 \trbrdrr\brdrs\brdrw15\brdrcf6 
+\clvertalc \clcbpat5 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw15\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw20\brdrcf7 \clpadt120 \clpadl30 \clpadb30 \clpadr120 \gaph\cellx4320
+\clvertalc \clcbpat5 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw20\brdrcf7 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw15\brdrcf6 \clpadt120 \clpadl30 \clpadb30 \clpadr120 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f5\fs21 \cf0 validate
+\f4\fs27 \cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Validates that the project is correct and all necessary information is available. This also makes sure the dependencies are downloaded.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw15\brdrcf6 \trbrdrr\brdrs\brdrw15\brdrcf6 
+\clvertalc \clcbpat5 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw15\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw20\brdrcf7 \clpadt120 \clpadl30 \clpadb30 \clpadr120 \gaph\cellx4320
+\clvertalc \clcbpat5 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw20\brdrcf7 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw15\brdrcf6 \clpadt120 \clpadl30 \clpadb30 \clpadr120 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f5\fs21 \cf0 compile
+\f4\fs27 \cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Compiles the source code of the project.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw15\brdrcf6 \trbrdrr\brdrs\brdrw15\brdrcf6 
+\clvertalc \clcbpat5 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw15\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw20\brdrcf7 \clpadt120 \clpadl30 \clpadb30 \clpadr120 \gaph\cellx4320
+\clvertalc \clcbpat5 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw20\brdrcf7 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw15\brdrcf6 \clpadt120 \clpadl30 \clpadb30 \clpadr120 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f5\fs21 \cf0 test
+\f4\fs27 \cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Runs the tests against the compiled source code using a suitable unit testing framework. These tests should not require the code be packaged or deployed.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw15\brdrcf6 \trbrdrr\brdrs\brdrw15\brdrcf6 
+\clvertalc \clcbpat5 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw15\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw20\brdrcf7 \clpadt120 \clpadl30 \clpadb30 \clpadr120 \gaph\cellx4320
+\clvertalc \clcbpat5 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw20\brdrcf7 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw15\brdrcf6 \clpadt120 \clpadl30 \clpadb30 \clpadr120 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f5\fs21 \cf0 package
+\f4\fs27 \cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Packs the compiled code in its distributable format, such as a JAR.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw15\brdrcf6 \trbrdrr\brdrs\brdrw15\brdrcf6 
+\clvertalc \clcbpat5 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw15\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw20\brdrcf7 \clpadt120 \clpadl30 \clpadb30 \clpadr120 \gaph\cellx4320
+\clvertalc \clcbpat5 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw20\brdrcf7 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw15\brdrcf6 \clpadt120 \clpadl30 \clpadb30 \clpadr120 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f5\fs21 \cf0 install
+\f4\fs27 \cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Install the package into the local repository, for use as a dependency in other projects locally.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw15\brdrcf6 \trbrdrb\brdrs\brdrw15\brdrcf6 \trbrdrr\brdrs\brdrw15\brdrcf6 
+\clvertalc \clcbpat5 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw15\brdrcf6 \clbrdrb\brdrs\brdrw15\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf7 \clpadt120 \clpadl30 \clpadb30 \clpadr120 \gaph\cellx4320
+\clvertalc \clcbpat5 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw20\brdrcf7 \clbrdrb\brdrs\brdrw15\brdrcf6 \clbrdrr\brdrs\brdrw15\brdrcf6 \clpadt120 \clpadl30 \clpadb30 \clpadr120 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f5\fs21 \cf0 deploy
+\f4\fs27 \cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Copies the final package to the remote repository for sharing with other developers and projects.\cell \lastrow\row
+\pard\pardeftab720\ri0\sb100\sa100\partightenfactor0
+
+\f0\fs28 \cf0 You execute one of these build phases by passing its name to the\'a0mvn\'a0command. Here is an example:\
+\pard\tx916\tx1832\tx2748\tx3664\tx4580\tx5496\tx6412\tx7328\tx8244\tx9160\tx10076\tx10992\tx11908\tx12824\tx13740\tx14656\pardeftab720\ri0\partightenfactor0
+
+\f5\fs20 \cf0 mvn package\
+\pard\pardeftab720\ri0\sb100\sa100\partightenfactor0
+
+\f0\fs28 \cf0 This example executes the\'a0package\'a0build phase, and thus also all build phases before it in Maven's predefined build phase sequence.\
+If the standard Maven build phases and goals are not enough to build your project, you can create{\field{\*\fldinst{HYPERLINK "http://tutorials.jenkov.com/maven/maven-tutorial.html%22%20%5Cl%20%22maven-plugins"}}{\fldrslt 
+\b \cf4 \ul \ulc4 Maven plugins}}\'a0to add the extra build functionality you need.\
+\pard\pardeftab720\ri0\sb100\sa100\partightenfactor0
+
+\b \cf0 Build Goals
+\b0 \uc0\u8232 Build goals are the finest steps in the Maven build process. A goal can be bound to one or more build phases, or to none at all. If a goal is not bound to any build phase, you can only execute it by passing the goals name to the\'a0mvn\'a0command. If a goal is bound to multiple build phases, that goal will get executed during each of the build phases it is bound to.\
+\pard\pardeftab720\ri0\sb360\partightenfactor0
+
+\fs41 \cf2 Maven Build Profiles\
+\pard\pardeftab720\ri0\sb100\sa100\partightenfactor0
+
+\fs28 \cf0 Maven build profiles enable you to build your project using different configurations. Instead of creating two separate POM files, you can just specify a profile with the different build configuration, and build your project with this build profile when needed.\
+You can read the full story about build profiles in the Maven POM reference under\'a0{\field{\*\fldinst{HYPERLINK "http://maven.apache.org/pom.html%22%20%5Cl%20%22Profiles%22%20%5Ct%20%22_blank"}}{\fldrslt 
+\b \cf4 \ul \ulc4 Profiles}}. Here I will give you a quick overview though.\
+Maven build profiles are specified inside the POM file, inside the\'a0profiles\'a0element. Each build profile is nested inside a\'a0profile\'a0element. Here is an example:\
+\pard\tx916\tx1832\tx2748\tx3664\tx4580\tx5496\tx6412\tx7328\tx8244\tx9160\tx10076\tx10992\tx11908\tx12824\tx13740\tx14656\pardeftab720\ri0\partightenfactor0
+
+\f5\fs20 \cf0 <project xmlns="http://maven.apache.org/POM/4.0.0"\
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"\
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0\
+   http://maven.apache.org/xsd/maven-4.0.0.xsd">\
+  <modelVersion>4.0.0</modelVersion>\
+\
+  <groupId>com.jenkov.crawler</groupId>\
+  <artifactId>java-web-crawler</artifactId>\
+  <version>1.0.0</version>\
+\
+  <profiles>\
+      <profile>\
+          <id>test</id>\
+          <activation>...</activation>\
+          <build>...</build>\
+          <modules>...</modules>\
+          <repositories>...</repositories>\
+          <pluginRepositories>...</pluginRepositories>\
+          <dependencies>...</dependencies>\
+          <reporting>...</reporting>\
+          <dependencyManagement>...</dependencyManagement>\
+          <distributionManagement>...</distributionManagement>\
+      </profile>\
+  </profiles>\
+\
+</project>\
+\
+\pard\pardeftab720\ri0\sb100\sa100\partightenfactor0
+
+\f0\fs28 \cf0 A build profile describes what changes should be made to the POM file when executing under that build profile. This could be changing the applications configuration file to use etc. The elements inside the\'a0profile\'a0element will override the values of the elements with the same name further up in the POM.\
+Inside the\'a0profile\'a0element you can see a\'a0activation\'a0element. This element describes the condition that triggers this build profile to be used. One way to choose what profile is being executed is in the\'a0settings.xml\'a0file. There you can set the active profile. Another way is to add\'a0-P profile-name\'a0to the Maven command line. See the profile documentation for more information.\
+\pard\pardeftab720\ri0\sb100\sa100\partightenfactor0
+\cf0 \kerning1\expnd-1\expndtw-2
+Maven supports the usage of profiles to define different configurations. If you start Maven, you can instruct it to use a certain profile. For this you specify the\'a0\kerning1\expnd0\expndtw0 -P\kerning1\expnd-1\expndtw-2
+\'a0parameter followed directly (without whitespace) by the profile, e.g.\'a0\kerning1\expnd0\expndtw0 -PyourProfile\kerning1\expnd-1\expndtw-2
+.\
+\pard\tx916\tx1832\tx2748\tx3664\tx4580\tx5496\tx6412\tx7328\tx8244\tx9160\tx10076\tx10992\tx11908\tx12824\tx13740\tx14656\pardeftab720\ri0\partightenfactor0
+
+\f2\fs24 \cf3 \kerning1\expnd0\expndtw0 <profiles>\cf0 \
+ \cf3 <profile>\cf0 \
+  \cf3 <id>\cf0 dev\cf3 </id>\cf0 \
+   \cf3 <activation>\cf0 \
+           \cf3 <activeByDefault>\cf0 true\cf3 </activeByDefault>\cf0 \
+        \cf3 </activation>\cf0 \
+  \cf3 <properties>\cf0 \
+    \cf3 <db.location>\cf0 URL_to_dev_system\cf3 </db.location>\cf0 \
+    \cf3 <logo.image>\cf0 companylogo.png\cf3 </logo.image>\cf0 \
+  \cf3 </properties>\cf0 \
+ \cf3 </profile>\cf0 \
+  \cf3 <profile>\cf0 \
+    \cf3 <id>\cf0 production\cf3 </id>\cf0 \
+        \cf3 <properties>\cf0 \
+            \cf3 <db.location>\cf0 URL_to_prod_system\cf3 </db.location>\cf0 \
+            \cf3 <logo.image>\cf0 companylogo2.png\cf3 </logo.image>\cf0 \
+        \cf3 </properties>\cf0 \
+    \cf3 </profile>\cf0 \
+ \cf3 </profiles>\cf0 \
+\pard\pardeftab720\ri0\sa120\partightenfactor0
+
+\f0\fs41 \cf2 \
+Maven and version control systems\
+\pard\pardeftab720\ri0\sb100\sa100\partightenfactor0
+
+\fs28 \cf0 \kerning1\expnd-1\expndtw-2
+Maven generates its output into the\'a0
+\i \kerning1\expnd-1\expndtw-2
+target
+\i0 \kerning1\expnd-1\expndtw-2
+\'a0folder of each project. This build output should not get included into your version control system.\
+Add this directory to your ignore resources. For example, if you use Git as version control system, add the "target/" entry to your\'a0
+\i \kerning1\expnd-1\expndtw-2
+.gitignore
+\i0 \kerning1\expnd-1\expndtw-2
+\'a0file in the root of each project.\
+\pard\pardeftab720\ri0\sa120\partightenfactor0
+
+\fs41 \cf2 \kerning1\expnd0\expndtw0 Useful properties\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth13145\trftsWidth3 \trbrdrt\brdrs\brdrw15\brdrcf10 \trbrdrl\brdrs\brdrw15\brdrcf10 \trbrdrr\brdrs\brdrw15\brdrcf10 
+\clvertalc \clcbpat9 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw20\brdrcf7 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw20\brdrcf7 \clpadt150 \clpadl120 \clpadb150 \clpadr150 \gaph\cellx4320
+\clmrg \clvertalc \clcbpat9 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw20\brdrcf7 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw20\brdrcf7 \clpadt150 \clpadl120 \clpadb150 \clpadr150 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\sa60\partightenfactor0
+
+\f3\i\fs24 \cf8 Useful properties\cell 
+\pard\intbl\itap1\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth13145\trftsWidth3 \trbrdrl\brdrs\brdrw15\brdrcf10 \trbrdrr\brdrs\brdrw15\brdrcf10 
+\clvertalt \clcbpat9 \clbrdrt\brdrs\brdrw5\brdrcf10 \clbrdrl\brdrs\brdrw5\brdrcf10 \clbrdrb\brdrs\brdrw15\brdrcf10 \clbrdrr\brdrs\brdrw15\brdrcf10 \clpadt150 \clpadl120 \clpadb150 \clpadr150 \gaph\cellx4320
+\clvertalt \clcbpat9 \clbrdrt\brdrs\brdrw5\brdrcf10 \clbrdrl\brdrs\brdrw5\brdrcf10 \clbrdrb\brdrs\brdrw15\brdrcf10 \clbrdrr\brdrs\brdrw5\brdrcf10 \clpadt150 \clpadl120 \clpadb150 \clpadr150 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\i0\b \cf0 Property\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 Description\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth13145\trftsWidth3 \trbrdrl\brdrs\brdrw15\brdrcf10 \trbrdrr\brdrs\brdrw15\brdrcf10 
+\clvertalt \clcbpat1 \clbrdrt\brdrs\brdrw5\brdrcf10 \clbrdrl\brdrs\brdrw5\brdrcf10 \clbrdrb\brdrs\brdrw15\brdrcf10 \clbrdrr\brdrs\brdrw15\brdrcf10 \clpadt150 \clpadl135 \clpadb135 \clpadr150 \gaph\cellx4320
+\clvertalt \clcbpat1 \clbrdrt\brdrs\brdrw5\brdrcf10 \clbrdrl\brdrs\brdrw5\brdrcf10 \clbrdrb\brdrs\brdrw15\brdrcf10 \clbrdrr\brdrs\brdrw5\brdrcf10 \clpadt150 \clpadl135 \clpadb135 \clpadr150 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\b0 \cf0 \kerning1\expnd-1\expndtw-2
+skipTests\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 true or false, specifies if tests should be executed or not\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth13145\trftsWidth3 \trbrdrl\brdrs\brdrw15\brdrcf10 \trbrdrb\brdrs\brdrw15\brdrcf10 \trbrdrr\brdrs\brdrw15\brdrcf10 
+\clvertalt \clcbpat11 \clbrdrt\brdrs\brdrw5\brdrcf10 \clbrdrl\brdrs\brdrw5\brdrcf10 \clbrdrb\brdrs\brdrw5\brdrcf10 \clbrdrr\brdrs\brdrw15\brdrcf10 \clpadt150 \clpadl135 \clpadb135 \clpadr150 \gaph\cellx4320
+\clvertalt \clcbpat11 \clbrdrt\brdrs\brdrw5\brdrcf10 \clbrdrl\brdrs\brdrw5\brdrcf10 \clbrdrb\brdrs\brdrw5\brdrcf10 \clbrdrr\brdrs\brdrw5\brdrcf10 \clpadt150 \clpadl135 \clpadb135 \clpadr150 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd-1\expndtw-2
+showWarnings\cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 true or false, defines if the Maven build shows the compiler warnings\cell \lastrow\row
+\pard\pardeftab720\ri0\sb100\sa100\partightenfactor0
+
+\f0 \cf0 \kerning1\expnd-1\expndtw-2
+\
+\pard\pardeftab720\ri0\sb100\sa100\partightenfactor0
+
+\fs41 \cf2 \kerning1\expnd0\expndtw0 Reference:\
+\pard\pardeftab720\ri0\sb100\sa100\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "http://www.vogella.com/tutorials/ApacheMaven/article.html"}}{\fldrslt 
+\fs24 \cf12 \kerning1\expnd-1\expndtw-2
+\ul \ulc12 http://www.vogella.com/tutorials/ApacheMaven/article.html}}
+\fs24 \cf0 \kerning1\expnd-1\expndtw-2
+\
+\pard\pardeftab720\ri0\sb100\sa100\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "http://tutorials.jenkov.com/maven/maven-tutorial.html"}}{\fldrslt \cf12 \kerning1\expnd-1\expndtw-2
+\ul \ulc12 http://tutorials.jenkov.com/maven/maven-tutorial.html}}\
+\
+\pard\pardeftab720\ri0\partightenfactor0
+
+\f3 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\pardeftab720\ri0\sb100\sa100\partightenfactor0
+
+\f0 \cf0 \kerning1\expnd-1\expndtw-2
+\
+\pard\pardeftab720\ri0\partightenfactor0
+\cf0 \kerning1\expnd0\expndtw0 \
+\
+}
