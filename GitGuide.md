@@ -94,6 +94,9 @@ git fetch origin
 git branch -r
 git checkout --track origin/<BRANCHNAME>
 
+OR
+git branch --set-upstream-to=<REMOTE-BRANCHNAME> <LOCAL-BRANCHNAME>  (track remote branch into local)
+
 git fetch --all
 ```
 ## Correct wrong commit message after push to remote
