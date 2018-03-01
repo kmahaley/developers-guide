@@ -46,6 +46,11 @@ git branch -a
 git pull  <REMOTENAME> <BRANCHNAME> 
 git push  <REMOTENAME> <BRANCHNAME> 
 ```
+OR
+to push branch which doesnot exists on remote
+```
+git push --set-upstream origin <BRANCHNAME>
+```
 ## Branching from remote respository
 ```
 git branch <BRANCHNAME>
