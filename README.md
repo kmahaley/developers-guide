@@ -6,3 +6,6 @@ Explains how to use git with command line
 
 ### MAVEN explained in maven-guide
 Explain how to use maven 
+
+### ORIKA explained in orika-guide
+Explains some scenarios related to orika mapper
