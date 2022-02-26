@@ -6,7 +6,7 @@
         - make powershell default: bring powershell on top of list
 
 ## Make powershell shorthand prompt(Optional)
-    - Avoid this if you are planning to add `Oh-My-Posh`
+    - **Avoid** this if you are planning to add `Oh-My-Posh`
     - Windows terminal -> powershell -> `echo $profile`
     - either create folder/file if not present
     - make shorthand directory name: this won't work with **oh-my-posh**
@@ -28,11 +28,16 @@
             - windows terminal -> install using given command eg.`winget install JanDeDobbeleer.OhMyPosh` -> restart windows terminal
             - windows terminal -> run `oh-my-posh.exe` -> you will see colored prompt
         - Continue to follow onmyposh document -> Replace your existing prompt
-            - Locate `jandedobbeleer.omp.json` at `~\AppData\Local\Programs\oh-my-posh\themes\` OR
-            - search using powershell `Get-ChildItem -Path C:\ -Filter jandedobbeleer.omp.json -Recurse -ErrorAction SilentlyContinue -Force`
-            - Open explorer where `jandedobbeleer.omp.json` exists -> copy/paste -> rename  `PromptProfile.json`
-            - Move file to friendly location
-            - Open file `code PromptProfile.json` -> edit `prompt` section -> Add or remove segments from json file `https://ohmyposh.dev/docs/az`
+            - Locate `jandedobbeleer.omp.json` 
+                - at `~\AppData\Local\Programs\oh-my-posh\themes\` OR
+                - search using powershell `Get-ChildItem -Path C:\ -Filter jandedobbeleer.omp.json -Recurse -ErrorAction SilentlyContinue -Force`
+            - If you have existing ProfilePrompt saved Or you can use ProfilePrompt.json from this Git folder `ProfilePrompt.json`
+                - `code $profile`. If you don't have a profile create one.
+                - Later we will update profile. Check section **Powershell profile**
+            - If you want to create new profile
+                - Open explorer where `jandedobbeleer.omp.json` exists -> copy/paste -> rename  `ProfilePrompt.json`
+                - Move file to friendly location. You can use this across devices
+                - Open file `code PromptProfile.json` -> edit `prompt` section -> Add or remove segments from json file `https://ohmyposh.dev/docs/az`
             - Open new powershell and see the changes
 
 ## Powershell icons
@@ -52,8 +57,10 @@
 
 ## Powershell profile
     - Profile will look like this
+    Eg. `USER_MENTIONED_PATH == E:\User\ProfilePrompt.json`
+    
     ```
-    oh-my-posh --init --shell pwsh --config "E:\User\ProfilePrompt.json" | Invoke-Expression
+    oh-my-posh --init --shell pwsh --config "{USER_MENTIONED_PATH}" | Invoke-Expression
 
     Import-Module -Name Terminal-Icons
 
