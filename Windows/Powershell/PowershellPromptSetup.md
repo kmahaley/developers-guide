@@ -16,7 +16,7 @@
     "$p> "
     }
     ```
-
+    
 ## Interactive Powershell display using Oh-My-Posh:
     - Install fonts
         - Goto https://www.nerdfonts.com/
@@ -31,11 +31,11 @@
             - Locate `jandedobbeleer.omp.json` 
                 - at `~\AppData\Local\Programs\oh-my-posh\themes\` OR
                 - search using powershell `Get-ChildItem -Path C:\ -Filter jandedobbeleer.omp.json -Recurse -ErrorAction SilentlyContinue -Force`
-            - If you have existing ProfilePrompt saved Or you can use ProfilePrompt.json from this Git folder `ProfilePrompt.json`
+            - If you have existing PromptProfile saved Or you can use PromptProfile.json from this Git folder `PromptProfile.json`
                 - `code $profile`. If you don't have a profile create one.
                 - Later we will update profile. Check section **Powershell profile**
             - If you want to create new profile
-                - Open explorer where `jandedobbeleer.omp.json` exists -> copy/paste -> rename  `ProfilePrompt.json`
+                - Open explorer where `jandedobbeleer.omp.json` exists -> copy/paste -> rename  `PromptProfile.json`
                 - Move file to friendly location. You can use this across devices
                 - Open file `code PromptProfile.json` -> edit `prompt` section -> Add or remove segments from json file `https://ohmyposh.dev/docs/az`
             - Open new powershell and see the changes
@@ -57,7 +57,7 @@
 
 ## Powershell profile
     - Profile will look like this
-    Eg. `USER_MENTIONED_PATH == E:\User\ProfilePrompt.json`
+    Eg. `USER_MENTIONED_PATH == E:\User\PromptProfile.json`
     
     ```
     oh-my-posh --init --shell pwsh --config "{USER_MENTIONED_PATH}" | Invoke-Expression
