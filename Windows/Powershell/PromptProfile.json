@@ -5,6 +5,7 @@
       "type": "prompt",
       "alignment": "left",
       "segments": [
+        
         {
           "type": "path",
           "style": "powerline",
@@ -40,30 +41,7 @@
             "template": "{{ .UpstreamIcon }}{{ .HEAD }}{{ .BranchStatus }}{{ if .Working.Changed }} \uF044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uF046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \uF692 {{ .StashCount }}{{ end }}"
           }
         },
-        {
-          "type": "node",
-          "style": "powerline",
-          "powerline_symbol": "\uE0B0",
-          "foreground": "#ffffff",
-          "background": "#6CA35E",
-          "properties": {
-            "prefix": " \uF898 ",
-            "display_version": true
-          }
-        },
-        {
-          "type": "python",
-          "style": "powerline",
-          "powerline_symbol": "\uE0B0",
-          "foreground": "#111111",
-          "background": "#FFDE57",
-          "properties": {
-            "prefix": " \uE235 ",
-            "display_mode": "files",
-            "fetch_virtual_env": false,
-            "template": "{{ .Full }}"
-          }
-        },
+        
         {
           "type": "azfunc",
           "style": "powerline",
@@ -77,23 +55,13 @@
           }
         },
         {
-          "type": "root",
-          "style": "powerline",
-          "powerline_symbol": "\uE0B0",
-          "foreground": "#111111",
-          "background": "#ffff66",
-          "properties": {
-            "root_icon": ""
-          }
-        },
-        {
           "type": "dotnet",
           "style": "powerline",
           "powerline_symbol": "\uE0B0",
           "foreground": "#000000",
           "background": "#00ffff",
           "properties": {
-            "prefix": " \uE77F "
+            "template": " \uE77F {{ .Full }} "
           }
         },
         {
@@ -103,18 +71,17 @@
           "foreground": "#ffffff",
           "background": "#4063D8",
           "properties": {
-            "prefix": " \uE738 "
+            "template": " \uE738 {{ .Full }}"
           }
         },
         {
-          "type": "kubectl",
+          "type": "root",
           "style": "powerline",
           "powerline_symbol": "\uE0B0",
-          "foreground": "#000000",
-          "background": "#ebcc34",
+          "foreground": "#111111",
+          "background": "#ffff66",
           "properties": {
-            "prefix": " \uFD31 ",
-            "template": "{{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}}"
+            "root_icon": ""
           }
         },
         {
@@ -133,6 +100,7 @@
         }
       ]
     }
+    
   ],
   "final_space": true,
   "console_title": true,
