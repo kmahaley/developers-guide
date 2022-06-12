@@ -24,6 +24,7 @@
         - Open windows terminal -> settings -> powershell -> appearance -> select font `CaskaydiaCove NF` 
         - Open VSCode -> command palette -> Settings UI -> search font -> add `CaskaydiaCove NF` -> restart VSCode
     - Install oh-My-Posh 
+        - installing "oh-My-Posh" will slow down powershell 3x times.
         - goto `https://ohmyposh.dev/` -> installation -> follow guide
             - windows terminal -> install using given command eg.`winget install JanDeDobbeleer.OhMyPosh` -> restart windows terminal
             - windows terminal -> run `oh-my-posh.exe` -> you will see colored prompt
@@ -60,6 +61,7 @@
     Eg. `USER_MENTIONED_PATH == E:\User\PromptProfile.json`
     
     ```
+    # oh-my-posh will slow powershell. you can comment below line for faster powershell.
     oh-my-posh --init --shell pwsh --config "{USER_MENTIONED_PATH}" | Invoke-Expression
 
     Import-Module -Name Terminal-Icons
