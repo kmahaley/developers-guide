@@ -29,13 +29,20 @@
 - Create web app project
   - `dotnet new webapi -n [ProjectName]`
 
-## Dotnet Build project/Solution
-- dotnet build
-- dotnet run
+## Dotnet Build and Run project/Solution
+- `dotnet build`
+  - `dotnet myapp.dll`
 - Build solution with configuration
   - `dotnet build Solution.sln /p:Configuration=Debug /p:Platform="Any CPU"`
+- `dotnet run`
 - Run dotnet project with kestrel server
   - `dotnet run --launch-profile "SampleApp"` 
+
+## Dotnet restore
+restore the project dependencies
+- `dotnet restore`
+- `dotnet restore --verbosity detailed`
+- `dotnet restore ./projects/app1/app1.csproj`
 
 ## Nuget packages
 - Add nuget package
