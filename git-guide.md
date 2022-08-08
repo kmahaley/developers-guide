@@ -145,3 +145,14 @@ git clean -df
 git commit -m <MESSAGE>
 ```
 
+## Revert credential commit
+
+- If you want to commit from another branch[SourceBranch] into your branch[TargetBranch] as staged
+- Use this, if you have commited credentials and want to edit it or redact the credential.
+  - Go to branch from which you want to cherry pick commit. [SourceBranch] which contains committed credentials.
+  - Copy commit id of [SourceBranch]
+  - Checkout your branch [TargetBranch]
+  - Type on terminal 
+    - `git cherry-pick -n [cherryPickedCommitId]`
+  - Can open any IDE or Visual Studio. git unstage changes
+- Edit file containing credential and commit changes to your branch [TargetBranch]
