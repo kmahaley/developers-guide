@@ -1,0 +1,56 @@
+# Useful powershell commands
+
+- Open powershell window and can try below cmds
+- Check powershel version
+	- `(Get-Host).Version`
+	- `$PSVersionTable`
+- Check powershell Profile path `$profile`
+- Open profile `Code $profile`
+- Find alias of cmds in powershell
+  - `alias` 
+- HostMachine variables 
+	- Get all syatem variabled
+		- `Get-Variable`
+	- Get all user environment variables
+		- `Get-ChildItem env:`
+- print environment variable
+	- `$env:synapse`
+- Perform action using environment variable
+	- `cd $Env:Synapse`
+
+- Get history of the powershell executed cmds
+	- `Get-History`
+	- `ctrl + r -> type command`
+- Find service running on a port
+	- `netstat -ano | findstr "8080"`
+- open a directory in file explorer using powershell
+	- `Start [DirectoryName]` 
+	- `start D:\Softwares\`
+- Search in cmd through powershel: Cmd -> open cmd  -> dir FileName.json /s -> exit -> exit cmd 
+- Search using powershell some file in some path
+	- `ls -Path C:\ -Filter *.omp.json -Recurse -ErrorAction SilentlyContinue -Force`
+	- `ls -Path C:\ -Filter *filename.txt -Recurse -ErrorAction SilentlyContinue -Force`
+	- Search in current directory
+		- `ls -Filter filename.txt -Recurse -ErrorAction SilentlyContinue -Force`
+- Save output of the command execution in a file
+	- `>` 
+	- `ls -Filter filename.txt -Recurse -ErrorAction SilentlyContinue -Force > search.txt`
+- Appened output of command execution in the file
+	- `>>`
+	- `ls -Filter filename.txt -Recurse -ErrorAction SilentlyContinue -Force >> search.txt`
+- Create New item
+	- `ni x.txt`
+- Rename existing item
+	- `ren x.txt y.json`
+- Current directory:
+	- `pwd`
+	- **OR**
+	- `ls`
+- Open file exlorer
+	- `explorer .`  
+	- `explorer E:/DotnetCode`
+- List of folders
+	- `tree /f .\MyApplicationType`
+
+- Find commands containing search keyword
+	- `Get-Command *ServiceFabricCluster* -All`
