@@ -4,6 +4,26 @@
     - open `settings.json`
         - hide windows powershell(because outdated): profiles -> list -> windows powershell -> hidden:true
         - make powershell default: bring powershell on top of list
+        - Open Settings.json and add missing fields related to fonts, color etc..
+        ```
+        {
+                "elevate": true,
+                "background": "#3C1835",
+                "colorScheme": "Campbell",
+                "experimental.retroTerminalEffect": false,
+                "font":
+                {
+                    "face": "CaskaydiaCove Nerd Font",
+                    "size": 12
+                },
+                "opacity": 100,
+                "tabColor": "#548308",
+                "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+                "hidden": false,
+                "name": "PowerShell",
+                "source": "Windows.Terminal.PowershellCore"
+            },
+        ```
 
 ## Make powershell shorthand prompt(Optional)
     - **Avoid** this if you are planning to add `Oh-My-Posh`
