@@ -41,7 +41,7 @@
     - Install fonts
         - Goto https://www.nerdfonts.com/
         - Download `Caskaydia Cove Nerd Font` -> extract -> copy fonts to `C:\Windows\Fonts\`
-        - Open windows terminal -> settings -> powershell -> appearance -> select font `CaskaydiaCove NF` 
+        - Open windows terminal -> settings -> powershell -> appearance -> select font `Cascadia Mono` 
         - Open VSCode -> command palette -> Settings UI -> search font -> add `CaskaydiaCove NF` -> restart VSCode
     - Install oh-My-Posh 
         - installing "oh-My-Posh" will slow down powershell 3x times.
